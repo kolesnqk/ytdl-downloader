@@ -5,113 +5,113 @@
 [![yt-dlp](https://img.shields.io/badge/yt--dlp-2023.12.30-red.svg)](https://pypi.org/project/yt-dlp/)
 [![FFmpeg](https://img.shields.io/badge/FFmpeg-Required-orange.svg)](https://ffmpeg.org/)
 
-Полнофункциональное PyQt5 приложение для скачивания видео с YouTube с использованием yt-dlp.
+A full-featured PyQt5 application for downloading videos from YouTube using yt-dlp.
 
-## Возможности
+## Features
 
-- 🎥 **Скачивание видео с YouTube** - поддержка всех форматов
-- 📋 **Выбор качества** - автоматическое определение доступных форматов
-- 🔄 **Умное объединение** - video-only форматы автоматически объединяются с лучшим аудио
-- 📁 **Выбор папки** - возможность выбрать папку для скачивания
-- 🎬 **Три типа скачивания**:
-  - **Video+Audio** - скачивание напрямую
-  - **Video Only** - скачивание видео + аудио + объединение
-  - **Audio Only** - скачивание только аудио
-- 📊 **Отображение размера** - показывает размер файла при выборе формата
-- 🎨 **Современный интерфейс** - удобный GUI с прогресс-баром
-- ⚡ **Многопоточность** - скачивание не блокирует интерфейс
-- 🛡️ **Обработка ошибок** - полная валидация и обработка ошибок
+- 🎥 **YouTube Video Download** - supports all formats
+- 📋 **Quality Selection** - auto-detects available formats
+- 🔄 **Smart Merging** - video-only formats automatically merge with the best available audio track during download
+- 📁 **Folder Selection** - option to choose download folder
+- 🎬 **Three Download Types**:
+  - **Video+Audio** - video + audio + merge
+  - **Video Only** - video only download
+  - **Audio Only** - audio only download
+- 📊 **Size Display** - shows file size when selecting format
+- 🎨 **Modern Interface** - user-friendly GUI with progress bar
+- ⚡ **Multithreading** - download doesn't block interface
+- 🛡️ **Error Handling** - full validation and error management
 
 ## 🚀 Быстрый старт
 
-### Клонирование и установка
+### Cloning and Installation
 ```bash
 git clone https://github.com/USERNAME/youtube-video-downloader.git
 cd youtube-video-downloader
 pip install -r requirements.txt
 ```
 
-### Установка FFmpeg
-- **Windows**: [Скачать](https://ffmpeg.org/download.html) и добавить в PATH
+### Installing FFmpeg
+- **Windows**: [Download](https://ffmpeg.org/download.html) and add to PATH
 - **Linux**: `sudo apt install ffmpeg`
 - **macOS**: `brew install ffmpeg`
 
-### Запуск
+### Running
 ```bash
 python main.py
 ```
 
-## 📦 Установка
+## 📦 Installation
 
-1. Убедитесь, что у вас установлен Python 3.6 или выше
-2. Установите зависимости:
+1. Ensure Python 3.6 or higher is installed
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Запуск
+## Running
 
-### GUI приложение (рекомендуется):
+### GUI Application (recommended):
 ```bash
 python main.py
 ```
 
-### Консольная версия:
+### Console Version:
 ```bash
 python youtube_downloader.py
 ```
 
-## Использование GUI
+## Using GUI
 
-1. **Запустите приложение** - `python main.py`
-2. **Введите ссылку** на YouTube видео в поле ввода
-3. **Выберите папку** для скачивания (по умолчанию - текущая папка)
-4. **Нажмите "Получить информацию"** - приложение получит данные о видео
-5. **Выберите формат** из выпадающего списка (качество, тип, расширение)
-6. **Нажмите "Скачать"** - видео будет скачано в выбранную папку
+1. **Run the app** - `python main.py`
+2. **Enter URL** of YouTube video in input field
+3. **Select folder** for download (default is current folder)
+4. **Click "Get Info""** - app retrieves video data
+5. **Choose format** from dropdown (quality, type, extension)
+6. **Click "Download"** - video downloads to selected folder
 
-### 📁 Где найти скачанные файлы
+### 📁 Where to Find Downloaded Files
 
-- **По умолчанию**: файлы скачиваются в папку с приложением
-- **Выбор папки**: нажмите кнопку "Выбрать папку" для выбора другой папки
-- **Имя файла**: автоматически генерируется из названия видео
-- **Формат**: MP4 (для объединенных файлов) или оригинальный формат
+- **Default**: files save to app folder
+- **Folder Selection**: click "Choose Folder" to pick another
+- **File Name**: auto-generated from video title
+- **Format**: MP4 (for merged files) or original format
 
-## Использование консольной версии
+## Using Console Version
 
-1. **Запустите скрипт** - `python youtube_downloader.py`
-2. **Введите URL** видео при запросе
-3. **Выберите формат** по ID из списка
-4. **Дождитесь завершения** скачивания
+1. **Run script** - `python youtube_downloader.py`
+2. **Enter URL** when prompted
+3. **Select format** by ID from list
+4. **Wait for download** to complete
 
-## Поддерживаемые форматы
+## Supported Formats
 
-- **Video+Audio** - полное видео с звуком
-- **Video Only** - только видео (автоматически объединяется с лучшим аудио)
-- **Audio Only** - только аудио
+- **Video+Audio** - full video with sound
+- **Video Only** - video only (auto-merges with best audio)
+- **Audio Only** - audio only
 
 ## Технические детали
 
-- **yt-dlp** - для скачивания видео
-- **PyQt5** - для графического интерфейса
-- **subprocess** - для запуска yt-dlp
-- **re** - для парсинга форматов
-- **QThread** - для многопоточного скачивания
+- **yt-dlp** - for video downloading
+- **PyQt5** - for GUI
+- **subprocess** - for running yt-dlp
+- **re** - for format parsing
+- **QThread** - for multithreaded downloading
 
-## Требования
+## Requirements
 
 - Python 3.6+
 - yt-dlp
 - PyQt5
-- FFmpeg (для объединения video-only форматов)
-- Интернет-соединение
+- FFmpeg (for merging video-only formats)
+- Internet connection
 
-### Установка FFmpeg
+### Installing FFmpeg
 
 **Windows:**
-1. Скачайте FFmpeg с https://ffmpeg.org/download.html
-2. Распакуйте в папку (например, `C:\ffmpeg`)
-3. Добавьте `C:\ffmpeg\bin` в PATH
+1. Download FFmpeg from https://ffmpeg.org/download.html
+2. Extract to a folder (e.g., `C:\ffmpeg`)
+3. Add `C:\ffmpeg\bin` to PATH
 
 **Linux:**
 ```bash
@@ -124,43 +124,44 @@ sudo yum install ffmpeg  # CentOS/RHEL
 brew install ffmpeg
 ```
 
-## Обработка ошибок
+## Error Handling
 
-Приложение автоматически:
-- Проверяет установку yt-dlp и FFmpeg при запуске
-- Показывает статус готовности в интерфейсе
-- Предупреждает о проблемах с FFmpeg для video-only форматов
-- Валидирует URL видео
-- Обрабатывает ошибки сети
-- Показывает понятные сообщения об ошибках
+App automatically:
+- Checks yt-dlp and FFmpeg installation on start
+- Displays readiness status in interface
+- Warns about FFmpeg issues for video-only formats
+- Validates video URL
+- Handles network errors
+- Shows clear error messages
 
-### Проверка установки
+### Installation Check
 
 ```bash
-python test_installation.py  # Проверка всех зависимостей
-python check_ffmpeg.py       # Проверка только FFmpeg
+python test_installation.py  # Check all dependencies
+python check_ffmpeg.py       # Check only FFmpeg
 ```
 
-## 📚 Документация
+## 📚 Documentation
 
-- [QUICK_START.md](QUICK_START.md) - Быстрый старт
-- [GITHUB_SETUP.md](GITHUB_SETUP.md) - Настройка GitHub
-- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Решение проблем
+- [QUICK_START.md](QUICK_START.md) - Quick Start
+- [GITHUB_SETUP.md](GITHUB_SETUP.md) - GitHub Setup
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Troubleshooting
 
-## 🤝 Вклад в проект
+## 🤝 Contributing
 
-1. Форкните репозиторий
-2. Создайте ветку для новой функции (`git checkout -b feature/AmazingFeature`)
-3. Зафиксируйте изменения (`git commit -m 'Add some AmazingFeature'`)
-4. Отправьте в ветку (`git push origin feature/AmazingFeature`)
-5. Откройте Pull Request
+1. Fork the repository
+2. Create branch for new feature (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
 
-## 📄 Лицензия
+## 📄 License
 
-Этот проект распространяется под лицензией MIT. См. файл `LICENSE` для подробностей.
+This project is released under the MIT License. See 'LICENSE' file for details.
 
-## 🙏 Благодарности
+## 🙏 Acknowledgments
 
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - за отличную библиотеку для скачивания
-- [PyQt5](https://www.riverbankcomputing.com/software/pyqt/) - за GUI фреймворк
-- [FFmpeg](https://ffmpeg.org/) - за инструменты для обработки медиа
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - for excellent download library
+- [PyQt5](https://www.riverbankcomputing.com/software/pyqt/) - for GUI framework
+- [FFmpeg](https://ffmpeg.org/) - for media processing tools
+
