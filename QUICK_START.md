@@ -1,24 +1,24 @@
-# 🚀 Быстрый старт
+# 🚀 Quick Start
 
-## Установка и запуск
+## Installation and Running
 
-### 1. Клонирование репозитория
+### 1. Clone Repository
 ```bash
 git clone https://github.com/USERNAME/youtube-video-downloader.git
 cd youtube-video-downloader
 ```
 
-### 2. Установка зависимостей
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Установка FFmpeg (для объединения video-only форматов)
+### 3. Install FFmpeg (for merging video-only formats)
 
 **Windows:**
-1. Скачайте с https://ffmpeg.org/download.html
-2. Распакуйте в `C:\ffmpeg`
-3. Добавьте `C:\ffmpeg\bin` в PATH
+1. Download from https://ffmpeg.org/download.html
+2. Extract to `C:\ffmpeg`
+3. Add `C:\ffmpeg\bin` to PATH
 
 **Linux:**
 ```bash
@@ -30,43 +30,44 @@ sudo apt install ffmpeg  # Ubuntu/Debian
 brew install ffmpeg
 ```
 
-### 4. Проверка установки
+### 4. Check Installation
 ```bash
 python test_installation.py
 ```
 
-### 5. Запуск приложения
+### 5. Run App
 ```bash
 python main.py
 ```
 
-## Использование
+## Usage
 
-1. **Введите ссылку** на YouTube видео
-2. **Выберите папку** для скачивания (опционально)
-3. **Нажмите "Получить информацию"**
-4. **Выберите формат** из списка
-5. **Нажмите "Скачать"**
+1. **Enter URL** Enter YouTube video URL
+2. **Select folder** (optional)
+3. **Click "Get Info"**
+4. **Choose format** from list
+5. **Click "Download"**
 
-## Типы форматов
+## Format Types
 
-- 🎬 **Video+Audio** - скачивание напрямую
-- 🎥 **Video Only** - скачивание видео + аудио + объединение в MP4
-- 🎵 **Audio Only** - скачивание только аудио
+- 🎬 **Video+Audio** - direct download
+- 🎥 **Video Only** - video + audio + merge to MP4
+- 🎵 **Audio Only** - audio only download
 
-## Возможности
+## Features
 
-- ✅ Выбор качества видео
-- ✅ Отображение размера файла
-- ✅ Выбор папки для скачивания
-- ✅ Автоматическое объединение video-only форматов
-- ✅ Современный GUI интерфейс
-- ✅ Многопоточное скачивание
+- ✅ Quality selection
+- ✅ File size display
+- ✅ Folder selection
+- ✅ Auto-merge of video-only formats
+- ✅ Modern GUI
+- ✅ Multithreaded download
 
-## Решение проблем
+## Troubleshooting
 
-См. [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
+See [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
 
-## Полная документация
+## Full Documentation
 
-См. [README.md](README.md)
+See [README.md](README.md)
+
